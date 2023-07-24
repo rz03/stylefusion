@@ -41,8 +41,8 @@ const Navbar = () => {
         listStyleType="none"
         fontSize="13px"
         py="14px"
-        px="30rem"
-        justifyContent="space-evenly"
+        px={{ lg: "8rem", xl: "15rem", "2xl": "30rem" }}
+        justifyContent="space-between"
         fontWeight="thin"
       >
         <li>
