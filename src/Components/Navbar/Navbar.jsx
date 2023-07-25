@@ -9,6 +9,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { SearchIcon, HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -80,12 +81,12 @@ const Navbar = () => {
           <ul className="list">
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                SHIRTS
+                <Link to="/products/shirts">SHIRTS</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                POLOS
+                <Link to="/products/polos">POLOS</Link>
               </Text>
             </li>
             <li className="items">

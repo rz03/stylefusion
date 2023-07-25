@@ -1,0 +1,87 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cutaway Collar Non-Iron Henley Weave Shirt - White",
+      "category": "shirts",
+      "price": 9150,
+      "sub-category": "business-shirts",
+      "fit": "extra-slim",
+      "color": "white",
+      "size": "",
+      "img": "./src/assets/shirts1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Non - Iron Twill Shirt - Ivory White",
+      "category": "shirts",
+      "price": 4572,
+      "sub-category": "business-shirts",
+      "fit": "extra-slim",
+      "color": "white",
+      "size": "",
+      "img": "src/assets/shirt3.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Cutaway Collar Non-Iron Poplin Shirt - Petrol Blue",
+      "category": "shirts",
+      "price": 7842,
+      "sub-category": "business-shirts",
+      "fit": "extra-slim",
+      "color": "blue",
+      "size": "",
+      "img": "src/assets/shirt5.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Cutaway Collar Non-Iron Fine Line Check Shirt - Ocean Blue",
+      "price": 7842,
+      "category": "shirts",
+      "sub-category": "business-shirts",
+      "fit": "extra-slim",
+      "color": "blue",
+      "size": ""
+    },
+    {
+      "id": 5,
+      "name": "Button-Down Collar Washed Fine Twill Shirt - Charcoal Grey",
+      "price": 7842,
+      "category": "shirts",
+      "sub-category": "casual-shirts",
+      "fit": "classic",
+      "color": "grey",
+      "size": ""
+    },
+    {
+      "id": 6,
+      "name": "Non - Iron Cushion Stretch Texture Shirt - Pink",
+      "category": "shirts",
+      "price": 9150,
+      "sub-category": "business-casual-shirts",
+      "fit": "slim",
+      "color": "pink",
+      "size": ""
+    },
+    {
+      "id": 7,
+      "name": "Button-Down Collar Washed Fine Twill Shirt - Olive Green",
+      "price": 7842,
+      "category": "shirts",
+      "sub-category": "casual-shirts",
+      "fit": "classic",
+      "color": "green",
+      "size": ""
+    },
+    {
+      "id": 8,
+      "name": "Non - Iron Rectangle Stretch Texture Shirt - Spearmint Green",
+      "price": 9150,
+      "category": "shirts",
+      "sub-category": "business-casual-shirts",
+      "fit": "slim",
+      "color": "green",
+      "size": ""
+    }
+  ]
+}
