@@ -149,6 +149,12 @@
       "color": "grey",
       "size": "",
       "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwa7bd64fc/hi-res/JEP0395LGY_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "name": "Jacket",
+      "description": "",
+      "price": 20000,
+      "id": 16
     }
   ],
   "banner-img": [
