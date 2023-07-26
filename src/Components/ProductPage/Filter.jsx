@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -11,7 +11,38 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-const Filter = () => {
+const Filter = ({ products, onFilterChange }) => {
+  const [selectedSizes, setSelectedSizes] = useState([]);
+  const [selectedColors, setSelectedColors] = useState([]);
+  useEffect(() => {
+    applyFilters();
+  }, [selectedSizes, selectedColors]);
+
+  const applyFilters = () => {
+    let filtered = products;
+
+    if (selectedSizes.length > 0) {
+      filtered = filtered.filter((product) =>
+        selectedSizes.some((size) => product.size.includes(size))
+      );
+    }
+
+    if (selectedColors.length > 0) {
+      filtered = filtered.filter((product) =>
+        selectedColors.includes(product.color)
+      );
+    }
+    onFilterChange(filtered);
+  };
+
+  const handleSizeFilterChange = (selected) => {
+    setSelectedSizes(selected);
+  };
+
+  const handleColorFilterChange = (selected) => {
+    setSelectedColors(selected);
+  };
+
   return (
     <div>
       <Accordion border="white">
@@ -36,14 +67,19 @@ const Filter = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} px="20px" fontSize="14px" lineHeight="1.8rem">
-            <CheckboxGroup colorScheme="gray">
+            <CheckboxGroup
+              colorScheme="gray"
+              value={selectedSizes}
+              onChange={handleSizeFilterChange}
+            >
               <Stack spacing="1" direction="column">
-                <Checkbox value="naruto">XS</Checkbox>
-                <Checkbox value="sasuke">S</Checkbox>
-                <Checkbox value="kakashi">M</Checkbox>
-                <Checkbox value="kakashi">L</Checkbox>
-                <Checkbox value="kakashi">XL</Checkbox>
-                <Checkbox value="kakashi">XXL</Checkbox>
+                <Checkbox value="">ALL SIZES</Checkbox>
+                <Checkbox value="xs">XS</Checkbox>
+                <Checkbox value="s">S</Checkbox>
+                <Checkbox value="m">M</Checkbox>
+                <Checkbox value="l">L</Checkbox>
+                <Checkbox value="xl">XL</Checkbox>
+                <Checkbox value="xxl">XXL</Checkbox>
               </Stack>
             </CheckboxGroup>
           </AccordionPanel>
@@ -70,15 +106,20 @@ const Filter = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} px="20px" fontSize="14px" lineHeight="1.8rem">
-            <CheckboxGroup colorScheme="gray">
+            <CheckboxGroup
+              colorScheme="gray"
+              value={selectedColors}
+              onChange={handleColorFilterChange}
+            >
               <Stack spacing="1" direction="column">
-                <Checkbox value="naruto">BLACK</Checkbox>
-                <Checkbox value="naruto">WHITE</Checkbox>
-                <Checkbox value="sasuke">BLUE</Checkbox>
-                <Checkbox value="kakashi">BROWN</Checkbox>
-                <Checkbox value="kakashi">CREAM</Checkbox>
-                <Checkbox value="kakashi">GREEN</Checkbox>
-                <Checkbox value="kakashi">GREY</Checkbox>
+                <Checkbox value="">ALL COLORS</Checkbox>
+                <Checkbox value="black">BLACK</Checkbox>
+                <Checkbox value="white">WHITE</Checkbox>
+                <Checkbox value="blue">BLUE</Checkbox>
+                <Checkbox value="brown">BROWN</Checkbox>
+                <Checkbox value="cream">CREAM</Checkbox>
+                <Checkbox value="green">GREEN</Checkbox>
+                <Checkbox value="grey">GREY</Checkbox>
               </Stack>
             </CheckboxGroup>
           </AccordionPanel>

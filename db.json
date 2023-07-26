@@ -7,7 +7,7 @@
       "price": 9150,
       "sub-category": "business-shirts",
       "color": "white",
-      "size": "",
+      "size": ["s", "l", "xl"],
       "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw1f0e6959/hi-res/FON2482WHT_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
@@ -17,7 +17,7 @@
       "price": 4572,
       "sub-category": "business-shirts",
       "color": "white",
-      "size": "",
+      "size": "xl",
       "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwb4e32196/FON0409NWH_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
@@ -27,7 +27,7 @@
       "price": 7842,
       "sub-category": "business-shirts",
       "color": "blue",
-      "size": "",
+      "size": "l",
       "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw628cdc1e/FON2490PET_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
@@ -37,7 +37,7 @@
       "category": "shirts",
       "sub-category": "business-shirts",
       "color": "blue",
-      "size": "",
+      "size": "l",
       "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw6c4de5e5/hi-res/FON2495OCE_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
@@ -67,7 +67,7 @@
       "category": "shirts",
       "sub-category": "casual-shirts",
       "color": "green",
-      "size": "",
+      "size": "l",
       "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw80f040fd/hi-res/CSR2022OLV_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {

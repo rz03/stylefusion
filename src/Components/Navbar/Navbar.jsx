@@ -55,7 +55,6 @@ const Navbar = () => {
         <Flex align="center" gap="30px">
           <InputGroup
             bg="#ebedf3"
-            borderRadius="5px"
             display={{
               base: "none",
               sm: "none",
@@ -64,11 +63,17 @@ const Navbar = () => {
               xl: "block",
               "2xl": "block",
             }}
+            width="20rem"
+            size="sm"
           >
             <InputRightElement pointerEvents="none">
               <SearchIcon color="gray.500" />
             </InputRightElement>
-            <Input type="tel" placeholder="What are you looking for ?" />
+            <Input
+              type="text"
+              borderRadius="5px"
+              placeholder="What are you looking for ?"
+            />
           </InputGroup>
 
           <button className="cart">

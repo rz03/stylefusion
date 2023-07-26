@@ -39,7 +39,7 @@ export default function Hero(props) {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 5, md: 9 }}
+        py={{ base: 2, md: 3 }}
         direction={{ base: "column", md: "row" }}
         textAlign={{ base: "center", md: "left" }}
       >
@@ -57,31 +57,6 @@ export default function Hero(props) {
           <Text color="#5e5e5e" fontSize="0.8rem" fontWeight="100">
             {details}
           </Text>
-          {/* <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: "column", sm: "row" }}
-          >
-            <Button
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              colorScheme={"red"}
-              bg={"red.400"}
-              _hover={{ bg: "red.500" }}
-            >
-              Get started
-            </Button>
-            <Button
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
-            >
-              How It Works
-            </Button>
-          </Stack> */}
         </Stack>
         <Flex
           flex={1}
