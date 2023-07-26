@@ -6,10 +6,9 @@
       "category": "shirts",
       "price": 9150,
       "sub-category": "business-shirts",
-      "fit": "extra-slim",
       "color": "white",
       "size": "",
-      "img": "./src/assets/shirts1.jpg"
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw1f0e6959/hi-res/FON2482WHT_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 2,
@@ -17,10 +16,9 @@
       "category": "shirts",
       "price": 4572,
       "sub-category": "business-shirts",
-      "fit": "extra-slim",
       "color": "white",
       "size": "",
-      "img": "src/assets/shirt3.jpg"
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwb4e32196/FON0409NWH_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 3,
@@ -28,10 +26,9 @@
       "category": "shirts",
       "price": 7842,
       "sub-category": "business-shirts",
-      "fit": "extra-slim",
       "color": "blue",
       "size": "",
-      "img": "src/assets/shirt5.jpg"
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw628cdc1e/FON2490PET_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 4,
@@ -39,9 +36,9 @@
       "price": 7842,
       "category": "shirts",
       "sub-category": "business-shirts",
-      "fit": "extra-slim",
       "color": "blue",
-      "size": ""
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw6c4de5e5/hi-res/FON2495OCE_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 5,
@@ -49,9 +46,9 @@
       "price": 7842,
       "category": "shirts",
       "sub-category": "casual-shirts",
-      "fit": "classic",
       "color": "grey",
-      "size": ""
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw30088050/hi-res/CSR2067CHA_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 6,
@@ -59,9 +56,9 @@
       "category": "shirts",
       "price": 9150,
       "sub-category": "business-casual-shirts",
-      "fit": "slim",
       "color": "pink",
-      "size": ""
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw8d6350d1/hi-res/FOB0724PNK_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 7,
@@ -69,9 +66,9 @@
       "price": 7842,
       "category": "shirts",
       "sub-category": "casual-shirts",
-      "fit": "classic",
       "color": "green",
-      "size": ""
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw80f040fd/hi-res/CSR2022OLV_COLLAR_DETAIL.jpg?sw=430&sh=540"
     },
     {
       "id": 8,
@@ -79,9 +76,95 @@
       "price": 9150,
       "category": "shirts",
       "sub-category": "business-casual-shirts",
-      "fit": "slim",
       "color": "green",
-      "size": ""
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwca0ee6e6/hi-res/FOB0725SPM_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 9,
+      "name": "Zip-Neck Jersey Polo - White",
+      "price": 7888,
+      "category": "polos",
+      "sub-category": "white-polos",
+      "color": "white",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw74df703a/hi-res/JEP0378WHT_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 10,
+      "name": "Tyrwhitt Pique Polo - White & Navy",
+      "price": 7888,
+      "category": "polos",
+      "sub-category": "white-polos",
+      "color": "white",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwcde07237/hi-res/JEP0377WNV_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 11,
+      "name": "Tyrwhitt Pique Polo - Navy Blue Melange",
+      "price": 7230,
+      "category": "polos",
+      "sub-category": "blue-polos",
+      "color": "blue",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwe54498d8/hi-res/JEP0384NAV_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 12,
+      "name": "Smart Jersey Polo - Ocean Blue",
+      "price": 7888,
+      "category": "polos",
+      "sub-category": "blue-polos",
+      "color": "blue",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwf900989e/hi-res/JEP0385OCE_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 13,
+      "name": "Smart Long Sleeve Jersey Polo - Black",
+      "price": 8546,
+      "category": "polos",
+      "sub-category": "long-sleeve-polos",
+      "color": "black",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dw64d1978d/hi-res/JEP0326BLK_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 14,
+      "name": "Smart Long Sleeve Jersey Polo - Olive Green",
+      "price": 8546,
+      "category": "polos",
+      "sub-category": "long-sleeve-polos",
+      "color": "green",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwf900989e/hi-res/JEP0385OCE_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    },
+    {
+      "id": 15,
+      "name": "Tyrwhitt Cool Zip-Neck Polo - Light Grey",
+      "price": 7888,
+      "category": "polos",
+      "sub-category": "zip-neck-polos",
+      "color": "grey",
+      "size": "",
+      "img": "https://www.charlestyrwhitt.com/dw/image/v2/AAWJ_PRD/on/demandware.static/-/Sites-ctshirts-master/default/dwa7bd64fc/hi-res/JEP0395LGY_COLLAR_DETAIL.jpg?sw=430&sh=540"
+    }
+  ],
+  "banner-img": [
+    {
+      "id": 1,
+      "category": "shirts",
+      "heading": "MEN'S SHIRTS",
+      "details": "Style Fusion shirts are world-famous for more than one reason: quality, perfect fit, and options. Choose from work shirts that dress you for meetings, tuxedo shirts for those special occasions, linen shirts for those easy days, and more. Order them your way; collar, cuff, size, fit, and style.",
+      "img": "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw37c017c3/merchAssets/SS23/TIBs/tib-ss23-061.jpg"
+    },
+    {
+      "id": 2,
+      "category": "polos",
+      "heading": "MEN'S POLOS",
+      "details": "Style Fusion’s polo shirts dress you for any occasion, made with soft yet strong cotton in a host of colours and patterns: from classic pique to unique jacquards.",
+      "img": "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw843b30f6/merchAssets/SS23/TIBs/tib-ss23-074.jpg"
     }
   ]
 }

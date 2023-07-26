@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import ProductCard from "../Components/ProductPage/ProductCard";
 import Filter from "../Components/ProductPage/Filter";
 import { Box, Grid } from "@chakra-ui/react";
+import Breadcrum from "../Components/ProductPage/Breadcrum";
+import Hero from "../Components/ProductPage/Hero";
 
 const Products = () => {
   const { category } = useParams();
@@ -26,20 +28,24 @@ const Products = () => {
 
   return (
     <div>
-      {/*
-      <ProductCard />
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <img src={product.img} alt="img" />
-          </li>
-        ))}
-      </ul> */}
-      <Grid templateColumns="1.25fr 4.75fr" gap={6}>
+      <Breadcrum category={category} />
+      <Hero category={category} />
+      <Grid
+        templateColumns={{ lg: "1fr 5fr", xl: "1fr 5fr", "2xl": "1fr 5fr" }}
+        gap={4}
+      >
         <Box>
           <Filter />
         </Box>
-        <Grid templateColumns="repeat(5,1fr)" gap={-1}>
+        <Grid
+          templateColumns={{
+            base: "repeat(2,1fr)",
+            md: "repeat(4,1fr)",
+            lg: "repeat(4,1fr)",
+            xl: "repeat(4,1fr)",
+            "2xl": "repeat(5,1fr)",
+          }}
+        >
           {products.map((product) => {
             return <ProductCard {...product} />;
           })}
