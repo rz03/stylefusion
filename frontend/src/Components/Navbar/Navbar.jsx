@@ -11,6 +11,7 @@ import { SearchIcon, HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -65,6 +66,7 @@ const Navbar = () => {
             }}
             width="20rem"
             size="sm"
+
           >
             <InputRightElement pointerEvents="none">
               <SearchIcon color="gray.500" />
