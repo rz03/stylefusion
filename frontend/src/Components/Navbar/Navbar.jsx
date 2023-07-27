@@ -9,6 +9,8 @@ import {
 import React, { useEffect, useState } from "react";
 import { SearchIcon, HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -54,7 +56,6 @@ const Navbar = () => {
         <Flex align="center" gap="30px">
           <InputGroup
             bg="#ebedf3"
-            borderRadius="5px"
             display={{
               base: "none",
               sm: "none",
@@ -63,11 +64,18 @@ const Navbar = () => {
               xl: "block",
               "2xl": "block",
             }}
+            width="20rem"
+            size="sm"
+
           >
             <InputRightElement pointerEvents="none">
               <SearchIcon color="gray.500" />
             </InputRightElement>
-            <Input type="tel" placeholder="What are you looking for ?" />
+            <Input
+              type="text"
+              borderRadius="5px"
+              placeholder="What are you looking for ?"
+            />
           </InputGroup>
 
           <button className="cart">
@@ -80,12 +88,12 @@ const Navbar = () => {
           <ul className="list">
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                SHIRTS
+                <Link to="/products/shirts">SHIRTS</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                POLOS
+                <Link to="/products/polos">POLOS</Link>
               </Text>
             </li>
             <li className="items">
