@@ -3,6 +3,8 @@ const cors = require("cors");
 const { connection } = require("./db");
 const { userRouter } = require("./routes/user.route");
 const { productRouter } = require("./routes/product.route");
+// const { cartRouter } = require("./routes/cart.route");
+const { orderRouter } = require("./routes/order.route");
 
 const app = express();
 app.use(express.json());
@@ -14,6 +16,7 @@ app.get("/", (req, res) => {
 
 app.use("/users", userRouter);
 app.use("/products", productRouter);
+app.use("/orders", orderRouter);
 
 app.listen(5000, async () => {
   try {
