@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const { connection } = require("./db");
 const { userRouter } = require("./routes/user.route");
+const { productRouter } = require("./routes/product.route");
 
 const app = express();
 app.use(express.json());
@@ -12,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRouter);
+app.use("/products", productRouter);
 
 app.listen(5000, async () => {
   try {
