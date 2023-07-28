@@ -34,8 +34,6 @@ productRouter.get("/:category/:id", async (req, res) => {
   }
 });
 
-module.exports = { productRouter };
-
 // add a product
 productRouter.post("/add", async (req, res) => {
   const payload = req.body;
@@ -50,3 +48,5 @@ productRouter.post("/add", async (req, res) => {
     });
   }
 });
+
+module.exports = { productRouter };
