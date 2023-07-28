@@ -136,9 +136,9 @@ const Cart = () => {
                 </b>
               </p>
             </div>
-            <p style={{ textAlign: "center" }}>(Not including delivery)</p>
+            {/* <p style={{ textAlign: "center" }}>(Not including delivery)</p> */}
             <button id="checkout" onClick={checkout}>
-              SECURE CHECKOUT
+              PLACE ORDER
             </button>
             <p style={{ paddingTop: "20px" }}>We accept:</p>
             <div>

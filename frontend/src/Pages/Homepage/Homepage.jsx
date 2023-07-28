@@ -29,8 +29,20 @@ const Homepage = () => {
             BUY 4 SHIRTS OR POLOS <br /> GET 20% OFF
           </h2>
           <div>
-            <button>SHOP SUMMER</button>
-            <button>SHOP SHIRTS</button>
+            <button
+              onClick={() => {
+                navigate("/products/polos");
+              }}
+            >
+              SHOP SUMMER
+            </button>
+            <button
+              onClick={() => {
+                navigate("/products/shirts");
+              }}
+            >
+              SHOP SHIRTS
+            </button>
           </div>
         </div>
         <video autoPlay muted loop>
