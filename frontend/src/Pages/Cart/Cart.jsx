@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
 
@@ -8,12 +8,12 @@ const Cart = () => {
     JSON.parse(localStorage.getItem("CART")) || []
   );
   const [userID, setUserID] = useState("");
+  const [isCartEmpty, setIsCartEmpty] = useState(false);
 
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   let cartItems = document.querySelector("#cart-items > span");
-  //   cartItems.innerText = cart.length;
-  // }, [cart]);
+  useEffect(() => {
+    setIsCartEmpty(cart.length === 0);
+  }, [cart]);
   const removeFromCart = (index) => {
     const updatedCart = cart.filter((item, ind) => ind !== index);
     setCart(updatedCart);
@@ -44,6 +44,10 @@ const Cart = () => {
   getUserID();
 
   const checkout = async () => {
+    if (isCartEmpty) {
+      alert("Your cart is empty. Please add items before placing an order.");
+      return;
+    }
     if (token) {
       const url = "http://localhost:5000";
       const payload = {

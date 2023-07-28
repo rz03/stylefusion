@@ -61,7 +61,7 @@ const Filter = ({ products, onFilterChange }) => {
                 fontWeight="600"
                 fontSize="0.9rem"
               >
-                SHIRT SIZE
+                SIZE
               </Box>
               <AccordionIcon />
             </AccordionButton>
