@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import ProductCard from "../Components/ProductPage/ProductCard";
-import Filter from "../Components/ProductPage/Filter";
+import ProductCard from "../../Components/ProductPage/ProductCard";
+import Filter from "../../Components/ProductPage/Filter";
 import {
   Box,
   Grid,
@@ -11,8 +11,8 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import Breadcrum from "../Components/ProductPage/Breadcrum";
-import Hero from "../Components/ProductPage/Hero";
+import Breadcrum from "../../Components/ProductPage/Breadcrum";
+import Hero from "../../Components/ProductPage/Hero";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Products = () => {
@@ -29,12 +29,12 @@ const Products = () => {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/products/?category=${category}`
+        `http://localhost:5000/products/${category}`
       );
       const data = await response.json();
-      setProducts(data);
-      setFilteredProducts(data);
-      setOriginalProducts(data);
+      setProducts(data.data);
+      setFilteredProducts(data.data);
+      setOriginalProducts(data.data);
     } catch (error) {
       console.error(error);
     }

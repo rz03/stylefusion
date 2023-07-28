@@ -10,12 +10,14 @@ import React, { useEffect, useState } from "react";
 import { SearchIcon, HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-
+import { FaUser, FaBagShopping } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
+  const token = localStorage.getItem("token") || null;
   useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth);
@@ -29,23 +31,45 @@ const Navbar = () => {
   const toggleNav = () => {
     setToggleMenu(!toggleMenu);
   };
+
+  const handleAccount = () => {
+    if (token !== null) {
+      navigate("/account");
+    } else {
+      navigate("/register");
+    }
+  };
+  const handleHome = () => {
+    navigate("/");
+  };
+  const handleCart = () => {
+    navigate("/cart");
+  };
   return (
     <nav>
       <Flex justify="space-between" align="center" px="60px">
-        <div className="user-icon">USER ICON HERE</div>
+        <button className="user-icon" onClick={handleAccount}>
+          <FaUser size={25} />
+        </button>
         <Flex
+          // border="1px solid black"
           py="20px"
-          px="10px"
+          // px="25rem"
+          // mx="40rem"
           flexDirection="column"
-          align="center"
+          // align="center"
           alignItems="center"
-          mx={{ base: "0px", sm: "5rem", md: "14rem", lg: "10rem" }}
+          mx={{ base: "0px", sm: "5rem", md: "14rem", lg: "rem" }}
         >
           <Heading
             fontSize="1.4rem"
             lineHeight="1.8rem"
             color="#001f49"
             letterSpacing="6px"
+            onClick={handleHome}
+            cursor="pointer"
+            // paddingLeft="14rem"
+            // border="1px solid black"
           >
             STYLE FUSION
           </Heading>
@@ -66,7 +90,7 @@ const Navbar = () => {
             }}
             width="20rem"
             size="sm"
-
+            marginRight={8}
           >
             <InputRightElement pointerEvents="none">
               <SearchIcon color="gray.500" />
@@ -78,8 +102,8 @@ const Navbar = () => {
             />
           </InputGroup>
 
-          <button className="cart">
-            <ExternalLinkIcon />
+          <button className="cart" onClick={handleCart}>
+            <FaBagShopping size={25} style={{ marginTop: "5px" }} />
           </button>
         </Flex>
       </Flex>
@@ -98,43 +122,55 @@ const Navbar = () => {
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                SUITS
+                <Link to="/products/suits">SUITS</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                TROUSERS
+                <Link to="/products/trousers">TROUSERS</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                KNITWEAR
+                <Link to="/products/knitwear">KNITWEAR</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                JACKETS & COATS
+                <Link to="/products/jackets">JACKETS & COATS</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                SHOES
+                <Link to="/products/shoes">SHOES</Link>
               </Text>
             </li>
             <li className="items">
               <Text fontWeight="light" color="#5e5e5e">
-                ACCESSORIES
+                <Link to="/products/accessories">ACCESSORIES</Link>
               </Text>
             </li>
             <li className="items">
-              <Text fontWeight="light" color="#5e5e5e">
-                CREATE AN ACCOUNT
-              </Text>
+              {token ? (
+                <FaUser
+                  onClick={() => {
+                    navigate("/account");
+                  }}
+                />
+              ) : (
+                <Text fontWeight="light" color="#5e5e5e">
+                  CREATE AN ACCOUNT
+                </Text>
+              )}
             </li>
             <li className="items">
-              <Text fontWeight="light" color="#5e5e5e">
-                LOG IN
-              </Text>
+              {token ? (
+                ""
+              ) : (
+                <Text fontWeight="light" color="#5e5e5e">
+                  LOG IN
+                </Text>
+              )}
             </li>
           </ul>
         )}

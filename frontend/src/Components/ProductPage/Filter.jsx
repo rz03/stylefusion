@@ -117,7 +117,7 @@ const Filter = ({ products, onFilterChange }) => {
                 <Checkbox value="white">WHITE</Checkbox>
                 <Checkbox value="blue">BLUE</Checkbox>
                 <Checkbox value="brown">BROWN</Checkbox>
-                <Checkbox value="cream">CREAM</Checkbox>
+                <Checkbox value="cream">PINK</Checkbox>
                 <Checkbox value="green">GREEN</Checkbox>
                 <Checkbox value="grey">GREY</Checkbox>
               </Stack>
