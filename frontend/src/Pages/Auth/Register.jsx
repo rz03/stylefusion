@@ -13,6 +13,34 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
+    if (!title || !fname || !lname || !email || !password || !phone) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    const phoneRegex = /^[0-9]{10,}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Please enter a valid phone number.");
+      return;
+    }
+
+    if (
+      password.length < 8 ||
+      !/\d/.test(password) ||
+      !/[a-zA-Z]/.test(password)
+    ) {
+      alert(
+        "Password should be at least 8 characters and contain at least one letter and one number."
+      );
+      return;
+    }
+
     const payload = {
       title: title,
       firstName: fname,
@@ -135,7 +163,14 @@ const Register = () => {
         </div>
         <div className="login">
           <h3 style={{ paddingBottom: "20px" }}>HAVE AN ACCOUNT?</h3>
-          <button id="login-btn">CLICK HERE TO LOG IN</button>
+          <button
+            id="login-btn"
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
+            CLICK HERE TO LOG IN
+          </button>
         </div>
       </div>
     </div>

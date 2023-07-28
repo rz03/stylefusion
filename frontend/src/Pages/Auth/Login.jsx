@@ -8,7 +8,30 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    return password.length >= 8;
+  };
+
   const handleSubmit = async () => {
+    if (!email || !password) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      alert("Password should be at least 8 characters.");
+      return;
+    }
     const payload = {
       email: email,
       password: password,
@@ -26,6 +49,8 @@ const Login = () => {
     if (data.msg == "Login Successful" && data.token !== "") {
       alert("Login Successful");
       navigate("/");
+    } else {
+      alert("Something went wrong, Please Check Your Credential");
     }
   };
 
@@ -114,7 +139,13 @@ const Login = () => {
               </div>
               <p>Set your size and monogramming preferences</p>
             </div>
-            <button className="login-page-btn" id="register-btn">
+            <button
+              className="login-page-btn"
+              id="register-btn"
+              onClick={() => {
+                navigate("/register");
+              }}
+            >
               CREATE AN ACCOUNT NOW
             </button>
           </div>
