@@ -31,11 +31,10 @@
   color: #000;
   font-size: 30px;
 }
-
 .cart {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 40px;
+  top: 15px;
   padding: 5px;
   font-size: 25px;
 }

@@ -85,8 +85,10 @@ const ProductDetails = () => {
               <select
                 name="prod-size"
                 id="prod-size"
+                value={selectedSize}
                 onChange={(e) => setSelectedSize(e.target.value)}
               >
+                <option value="">Size</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -102,11 +104,11 @@ const ProductDetails = () => {
               <select
                 name="prod-qty"
                 id="prod-qty"
+                value={quantity}
                 onChange={(e) => setQuantity(e.target.value)}
               >
-                <option value="1" selected>
-                  1
-                </option>
+                <option value="">Quantity</option>
+                <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>

@@ -75,21 +75,21 @@
   align-items: center;
 }
 
-.order-card {
-  /* border: 1px solid #001f49; */
-  /* background: #ebedf3; */
-}
+/* .order-card {
+  border: 1px solid #001f49;
+  background: #ebedf3;
+} */
 
 li {
   list-style: none;
 }
-.product-list {
-  /* border: 1px solid black; */
-  /* display: flex;
+/* .product-list {
+  border: 1px solid black;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 2rem; */
-}
+  gap: 2rem;
+} */
 
 .product-item {
   margin: 20px 0;

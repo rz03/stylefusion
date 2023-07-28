@@ -103,11 +103,9 @@ const Account = () => {
       <div id="order-list">
         <h2>Order History</h2>
         <hr />
-        {/* Render orders */}
         {productsData.map((order) => (
           <div key={order._id} className="order-card">
             <ul className="product-list">
-              {/* Render products for each order */}
               {order.products.map((product) => (
                 <li key={product.prod_id} className="product-item">
                   <img src={product.img} alt="" className="product-img" />

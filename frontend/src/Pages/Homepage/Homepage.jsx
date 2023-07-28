@@ -1,7 +1,25 @@
 import React from "react";
 import "./homepage.css";
+// import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+  // const sliderImages = [
+  //   "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw6f739df5/merchAssets/SS23/Homepage/hero-carousel/hc-059.jpg",
+  //   "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw46ad7926/merchAssets/SS23/Homepage/hero-carousel/hc-069.jpg",
+  //   "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw4953505b/merchAssets/SS23/Homepage/hero-carousel/hc-067.jpg",
+  //   "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw64d38fd3/merchAssets/SS23/Homepage/hero-carousel/hc-047.jpg",
+  //   "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dwe0525381/merchAssets/SS23/Homepage/hero-carousel/hc-068.jpg",
+  //   "https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw86528854/merchAssets/SS23/Homepage/hero-carousel/hc-070.jpg",
+  // ];
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
+  const navigate = useNavigate();
   return (
     <div>
       <div id="video-container">
@@ -24,27 +42,51 @@ const Homepage = () => {
         </video>
       </div>
       <div id="slider1">
-        <a href="">
+        <a
+          onClick={() => {
+            navigate("/products/polos");
+          }}
+        >
           <h4>POLOS</h4>
           <h3>Buy 4, Save 20%</h3>
         </a>
-        <a href="">
+        <a
+          onClick={() => {
+            navigate("/products/trousers");
+          }}
+        >
           <h4>TROUSERS & SHORTS</h4>
           <h3>Buy 2, Save 20%</h3>
         </a>
-        <a href="">
+        <a
+          onClick={() => {
+            navigate("/products/shirts");
+          }}
+        >
           <h4>LINEN COLLECTION</h4>
           <h3>Lightweight & breathable</h3>
         </a>
-        <a href="">
+        <a
+          onClick={() => {
+            navigate("/products/shoes");
+          }}
+        >
           <h4>Summer Shoes</h4>
           <h3>Walking on Sunshine</h3>
         </a>
-        <a href="">
+        <a
+          onClick={() => {
+            navigate("/products/shirts");
+          }}
+        >
           <h4>CASUAL SHIRTS</h4>
           <h3>Buy 4, Save 20%</h3>
         </a>
-        <a href="">
+        <a
+          onClick={() => {
+            navigate("/products/suits");
+          }}
+        >
           <h4>BLAZERS</h4>
           <h3>Good to Go</h3>
         </a>
@@ -75,7 +117,13 @@ const Homepage = () => {
             />
           </div>
           <button>
-            <a href="./shirts.html">SHOP THE COLLECTION</a>
+            <a
+              onClick={() => {
+                navigate("/products/shirts");
+              }}
+            >
+              SHOP THE COLLECTION
+            </a>
           </button>
         </div>
       </div>

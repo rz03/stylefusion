@@ -100,9 +100,11 @@ const Cart = () => {
                     <p className="item-size">
                       Size: <span>{item.size}</span>
                     </p>
+                    <hr />
                     <p className="item-qty">
                       Quantity: <span>{item.quantity}</span>
                     </p>
+                    <hr />
                     <p className="item-price">
                       Price: ₹<span>{item.price * item.quantity}</span>
                     </p>
@@ -116,15 +118,15 @@ const Cart = () => {
         <div id="order-summary">
           <p>ORDER SUMMARY</p>
           <div>
-            <p>TOTAL</p>
-            <hr />
-            <div>
+            {/* <p>TOTAL</p>
+            <hr /> */}
+            <div className="bagtotal">
               <p>BAG TOTAL</p>
               <p>
                 ₹<span id="bag-total">{getTotalPrice()}</span>
               </p>
             </div>
-            <div>
+            <div className="total">
               <p>
                 <b>TOTAL</b>
               </p>
@@ -138,7 +140,7 @@ const Cart = () => {
             <button id="checkout" onClick={checkout}>
               SECURE CHECKOUT
             </button>
-            <p>We accept:</p>
+            <p style={{ paddingTop: "20px" }}>We accept:</p>
             <div>
               <img
                 src="https://www.charlestyrwhitt.com/on/demandware.static/-/Library-Sites-CTShirtsSharedLibrary/default/dw733cef56/images/payment_methods/basket_mastercard.svg"
