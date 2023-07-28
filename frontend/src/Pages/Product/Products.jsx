@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import ProductCard from "../Components/ProductPage/ProductCard";
-import Filter from "../Components/ProductPage/Filter";
+import ProductCard from "../../Components/ProductPage/ProductCard";
+import Filter from "../../Components/ProductPage/Filter";
 import {
   Box,
   Grid,
@@ -11,8 +11,8 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import Breadcrum from "../Components/ProductPage/Breadcrum";
-import Hero from "../Components/ProductPage/Hero";
+import Breadcrum from "../../Components/ProductPage/Breadcrum";
+import Hero from "../../Components/ProductPage/Hero";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Products = () => {
