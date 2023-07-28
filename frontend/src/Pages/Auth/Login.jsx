@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    const payload = {
+      email: email,
+      password: password,
+    };
+    let res = await fetch("http://localhost:5000/users/login", {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let data = await res.json();
+    localStorage.setItem("token", data.token);
+    console.log(data);
+    if (data.msg == "Login Successful" && data.token !== "") {
+      alert("Login Successful");
+      navigate("/");
+    }
+  };
+
   return (
     <div className="top">
       <h2
@@ -21,6 +48,8 @@ const Login = () => {
               name="email"
               id="email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <br />
             <label>Password</label>
@@ -31,11 +60,17 @@ const Login = () => {
               name="email"
               id="password"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <br />
             <a href="#">Forgotten your password?</a>
             <br />
-            <button className="login-page-btn" id="account-login">
+            <button
+              className="login-page-btn"
+              id="account-login"
+              onClick={handleSubmit}
+            >
               LOG IN
             </button>
           </div>

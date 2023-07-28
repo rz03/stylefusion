@@ -1,15 +1,15 @@
 .login {
-  /* width: 60%; */
+  width: 60%;
   margin: auto;
   /* border: 2px solid red; */
   display: flex;
-  padding: 2rem 20rem;
+  /* padding: 2rem 20rem; */
 }
 .heading {
   font-weight: 600;
   font-size: 1rem;
   font-size: 1.4rem;
-  padding: 15px 20px;
+  padding: 15px 20px 15px 50px;
 }
 .login-page-btn {
   margin-top: 20px;
@@ -23,7 +23,7 @@
   width: 90%;
   height: 10px;
   padding: 15px 15px;
-  color: #ffffff;
+  /* color: #ffffff; */
   border: 1px solid #001f49;
 }
 .main {

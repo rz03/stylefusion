@@ -52,4 +52,28 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
+userRouter.get("/details", async (req, res) => {
+  const token = req.headers.authorization;
+  if (token) {
+    try {
+      const decoded = jwt.verify(token, "stylefusion");
+      if (decoded) {
+        const { userID } = decoded;
+        const user = await userModel.findOne({ _id: userID }).exec();
+        if (user) {
+          res.send(user);
+        } else {
+          res.send({ msg: "User not found" });
+        }
+      } else {
+        res.send({ msg: "Invalid Token !!" });
+      }
+    } catch (err) {
+      res.send({ msg: err.message });
+    }
+  } else {
+    res.send({ msg: "Authentication failed" });
+  }
+});
+
 module.exports = { userRouter };

@@ -15,7 +15,7 @@ const Homepage = () => {
             <button>SHOP SHIRTS</button>
           </div>
         </div>
-        <video autoplay muted loop>
+        <video autoPlay muted loop>
           <source
             src="https://player.vimeo.com/progressive_redirect/playback/834812875/rendition/720p/file.mp4?loc=external&signature=5ceaadc3d0e97d46904e15d884e6b53b5eb634e2ea45db782ef47bf8563c2dec"
             type="video/mp4"

@@ -10,9 +10,11 @@ import React, { useEffect, useState } from "react";
 import { SearchIcon, HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-
+import { FaUser, FaBagShopping } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -29,10 +31,27 @@ const Navbar = () => {
   const toggleNav = () => {
     setToggleMenu(!toggleMenu);
   };
+
+  const handleAccount = () => {
+    const token = localStorage.getItem("token") || null;
+    if (token !== null) {
+      navigate("/account");
+    } else {
+      navigate("/register");
+    }
+  };
+  const handleHome = () => {
+    navigate("/");
+  };
+  const handleCart = () => {
+    navigate("/cart");
+  };
   return (
     <nav>
       <Flex justify="space-between" align="center" px="60px">
-        <div className="user-icon">USER ICON HERE</div>
+        <button className="user-icon" onClick={handleAccount}>
+          <FaUser size={25} />
+        </button>
         <Flex
           py="20px"
           px="10px"
@@ -46,6 +65,7 @@ const Navbar = () => {
             lineHeight="1.8rem"
             color="#001f49"
             letterSpacing="6px"
+            onClick={handleHome}
           >
             STYLE FUSION
           </Heading>
@@ -66,7 +86,6 @@ const Navbar = () => {
             }}
             width="20rem"
             size="sm"
-
           >
             <InputRightElement pointerEvents="none">
               <SearchIcon color="gray.500" />
@@ -78,8 +97,8 @@ const Navbar = () => {
             />
           </InputGroup>
 
-          <button className="cart">
-            <ExternalLinkIcon />
+          <button className="cart" onClick={handleCart}>
+            <FaBagShopping size={25} style={{ marginTop: "5px" }} />
           </button>
         </Flex>
       </Flex>

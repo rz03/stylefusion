@@ -19,13 +19,12 @@ export default function Hero(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `http://localhost:5000/banner-img?category=${category}`
-        );
+        const response = await fetch(`http://localhost:5000/hero/${category}`);
         const data = await response.json();
-        setHeading(data[0].heading);
-        setDetails(data[0].details);
-        setImgSrc(data[0].img);
+        // console.log(data.data[0]);
+        setHeading(data.data[0].heading);
+        setDetails(data.data[0].details);
+        setImgSrc(data.data[0].img);
       } catch (error) {
         console.error(error);
       }

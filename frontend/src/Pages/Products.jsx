@@ -29,12 +29,12 @@ const Products = () => {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/products/?category=${category}`
+        `http://localhost:5000/products/${category}`
       );
       const data = await response.json();
-      setProducts(data);
-      setFilteredProducts(data);
-      setOriginalProducts(data);
+      setProducts(data.data);
+      setFilteredProducts(data.data);
+      setOriginalProducts(data.data);
     } catch (error) {
       console.error(error);
     }
