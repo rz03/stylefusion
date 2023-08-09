@@ -51,7 +51,7 @@ To run this application locally, follow these steps:
 1. Clone the repository:
 
 ```
-git clone https://github.com/rz03/stylefusion.git
+https://github.com/tusharag6/stylefusion.git
 ```
 
 2. Change into the project directory:
